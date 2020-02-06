@@ -1,0 +1,35 @@
+
+{% load staticfiles %}
+<head>
+<link rel="stylesheet" href="{% static 'css/all.css' %}" />
+<link rel="stylesheet" href="{% static 'css/v4-shims.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<script href="{% static "js/jquery-3.4.1.js" %}"></script>
+<link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static "css/login.css"%}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<meta name="csrf_token" content="{{ csrf_token }}">
+
+{% block body_block %}
+  <div class="container">
+
+      {% if registered %}
+        <h1>Thank you for registering!</h1>
+      {% else %}
+        <h1>Register</h1>
+        <h3>Just fill out the form.</h3>
+<form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p }}
+          <input type="submit" name="" value="Register">
+        </form>
+        
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+</body>

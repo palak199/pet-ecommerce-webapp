@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/all.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Fruktur&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/v4-shims.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<script href="{% static "js/jquery-3.4.1.js" %}"></script>
+<link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static "css/item.css"%}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+ <div class="row">
+        {% for cat in items %}
+            <div class="col s12 m6 l4">
+                <a href="{{cat.slug}}", style="color:#000">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title">{{cat.price}}</div>
+                            <!--<p style="font-size:70%">Published {{tut.tutorial_published}}</p>-->
+                            <p>{{cat.features|linebreaks}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+<h1>c4u | Accessories </h1>
+
+
+</body>
+</html>

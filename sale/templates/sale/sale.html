@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/all.css' %}" />
+<link rel="stylesheet" href="{% static 'css/v4-shims.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<script href="{% static "js/jquery-3.4.1.js" %}"></script>
+<link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static "css/sale.css"%}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<style>
+#shop{
+background:url("{% static 'img/cat-bag.webp' %}");
+height:500px;
+}
+</style>
+<h1 id="heading">Because Cats ♥ shopping <i class=" fas fa-shopping-cart"></i></h1>
+<nav class="navbar sticky-top transparent navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"><i class="fas fa-paw"></i></a>
+  <div class=" collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="nav justify-content-end mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'sale:sale' %}">PURCHASE & SELL</a>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'catcare:cat_care' %}">CARE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'accounts:user_login'%}">LOGIN</a>
+      </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="row">
+<div class="col-2">
+<nav class="nav flex-column">
+  <a class="nav-link active" href="{% url 'sale:category' %}">Cats</a>
+  <a class="nav-link" href="{% url 'sale:category' %}">Accessories</a>
+  <a class="nav-link" href="{% url 'sale:category' %}">food</a>
+  <a class="nav-link" href="#">Clothes</a>
+  <a class="nav-link" href="#">medicine</a> 
+</nav>
+</div>
+<div id="shop" class="col-10" >
+<h1 id="btn" style="position:absolute; margin-top:50px;" ><hr>buy it something<hr></h1>
+</div>
+</div>
+
+
+
+
+<div class="jumbotron text-center">
+<h2 id="btn" class="ml-5 py-2">Discover our best</h2>
+<hr>
+<div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-mug.jpg" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" class="card-text">meow-mugs</button>
+  </div>
+</div>
+<div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-top.jpg" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" class="card-text">meow-Ts.</button>
+  </div>
+</div>
+<div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-bell.jpeg" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" class="card-text">meow-bells</button>
+  </div>
+  </div>
+  <div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-top.jpg" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" class="card-text">meow-Ts.</button>
+  </div>
+</div>
+  <div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-bow.webp" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" class="card-text">meow-bows</button>
+  </div>
+  </div>
+  <div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-top.jpg" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" class="card-text">meow-Ts.</button>
+  </div>
+</div>
+  <div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-specs.jpg" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" class="card-text">meow-glares</button>
+  </div>
+  </div>
+<div class="card d-inline-block" style="width: 18rem;">
+  <img class="card-img-top" src="{% static "img/cat-wool.png" %}" alt="Card image cap">
+  <div class="card-body">
+    <button href="{% url 'sale:category' %}" type="button" class="card-text">meow-wool</button>
+  </div>
+  </div>
+</div>
+<footer class=" container-flex" style="opacity:0.8">
+<div id="footer" class="py-2 mt-5 text-center">
+contact-0101-0001 <br>
+e-mail-c4u@gmail.com<br>
+address-nowhere
+
+<div>
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-pinterest"></i>
+<i class="fab fa-snapchat"></i>
+</div>
+</div>
+</footer>
+</body>
+
+</html>

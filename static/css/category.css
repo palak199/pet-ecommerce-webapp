@@ -1,0 +1,46 @@
+body{
+    background:honeydew !important;
+}
+h1{
+    font-size:75px;
+    font-family: pacifico;
+    color:white !important;
+    background: linear-gradient(to right,white,rgb(195, 233, 255),white,lightblue,white,rgb(175, 226, 255), white);
+}
+.navbar.transparent{
+    background-color: rgba(0,0,0,0.0) !important;
+}
+#heading{
+    font-family: pacifico;
+    color:black !important;
+}
+#head{
+    background:white;
+    color:black;
+    position:absolute; 
+    margin-top:200px; 
+    margin-left:500px;
+    font-family: pacifico;
+}
+.fab,.fas{
+    font-weight: 900; 
+    font-family: 'fontAwesome';
+}
+#top-text{
+    background-color: aliceblue;
+    color: black;
+    position: absolute;
+    margin-top: 300px;
+    padding: 15px;
+    margin-left:425px;
+    font-size: large;
+    font-family: pacifico;
+}
+.jumbotron{
+    background-color: rgba(0,0,0,0.0) !important;
+}
+
+#footer{
+    background:black;
+    color:white;
+}
